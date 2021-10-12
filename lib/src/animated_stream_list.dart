@@ -21,7 +21,7 @@ class AnimatedStreamList<E> extends StatefulWidget {
   final Duration duration;
 
   AnimatedStreamList(
-      {required this.streamList,
+      {Key? key, required this.streamList,
       this.initialList,
       required this.itemBuilder,
       required this.itemRemovedBuilder,
@@ -33,7 +33,7 @@ class AnimatedStreamList<E> extends StatefulWidget {
       this.shrinkWrap: false,
       this.padding,
       this.equals,
-      this.duration = const Duration(milliseconds: 300)});
+      this.duration = const Duration(milliseconds: 300)}) : super(key: key);
 
   @override
   State<StatefulWidget> createState() => _AnimatedStreamListState<E>();
